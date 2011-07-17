@@ -67,7 +67,7 @@ def pay_me_now(username, password):
 		print "Failed to login"
 		return
 
-	# click my_account, but with nonce/secret_token being empty
+	# bug with nonce/secret_token (for XSRF) being empty
 	br.reload()
 
 	# logged in
