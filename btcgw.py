@@ -11,7 +11,7 @@
 import mechanize
 
 URL_LOGIN = 'https://www.btcguild.com/my_account.php'
-DEBUG = False
+DEBUG = True
 
 def log(*args):
 	if DEBUG:
@@ -66,9 +66,6 @@ def pay_me_now(username, password):
 	except:
 		print "Failed to login"
 		return
-
-	# bug with nonce/secret_token (for XSRF) being empty
-	br.reload()
 
 	# logged in
 	try:
